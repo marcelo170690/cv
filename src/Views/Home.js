@@ -5,7 +5,7 @@ import Experiences from "../Components/Experiences";
 import Loader from "../Components/Loader";
 import Academics from "../Components/Academics";
 import Courses from "../Components/Courses";
-import Api from '../Api'
+// import Api from '../Api'
 
 const experiences = [
   {
