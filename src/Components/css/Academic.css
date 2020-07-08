@@ -1,0 +1,11 @@
+.card{
+  transition-duration: 0.2s;
+  transition-timing-function: linear;
+}
+.card:hover{
+  border: 3px solid #FFC107;
+  background: #fcecd5;
+}
+.title-academic{
+  border-bottom: 4px solid #939393;
+}

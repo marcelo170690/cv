@@ -1,0 +1,8 @@
+.father{
+    display: flex;
+    flex-direction: row;
+    background: linear-gradient(90deg, rgb(28, 45, 161) 0%, rgba(64,186,181,1) 22%, rgb(0, 0, 5) 89%);
+}
+.son{
+    width: 25%;
+}

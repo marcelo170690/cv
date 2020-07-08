@@ -1,0 +1,21 @@
+.loader__container{
+  border: 1px solid black;
+  width: 100%;
+  height: 200px;
+}
+.spinner-border{
+  width: 3rem;
+  height: 3rem;
+}
+.text-arc{
+  color: #81BE39;
+}
+.text-thing{
+  color: #EF6271;
+}
+.text-terrain{
+  color: #02B4F1;
+}
+.text-mood{
+  color: #B480B6;
+}

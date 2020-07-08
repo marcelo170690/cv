@@ -1,0 +1,43 @@
+body{
+    font-family: Consolas, Serif;
+}
+.son{
+    width: 25%;
+    background: transparent;
+    height: 70px;
+    border-radius: 0;
+    color: white;
+    transition-duration: 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.son:hover{
+    background: rgb(26, 50, 180);
+    border: 1px solid white;
+    color: white;
+}
+.container-global{
+    position: relative;
+    top: 70px;
+    padding: 1em;
+}
+/* width */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #09015B;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(26, 50, 180);
+}

@@ -1,0 +1,34 @@
+.experience{
+  /*border: 2px solid #0791E6*/
+  border-bottom: 3px solid #D6D6D6;
+  display: flex;
+  flex-direction: row;
+  transition-timing-function: ease;
+}
+.experience-left{
+  width: 5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 45px;
+}
+.experience-right{
+  border-left: 3px solid #0791E6;
+  padding-left: 5%;
+  width: 90%;
+}
+.experience:hover{
+  border-right: 3px solid #97C941;
+  border-bottom: 3px solid #97C941;
+  background: #eeeded;
+}
+.circle{
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background: #0791E6;
+  position: absolute;
+}
+.title-experience{
+  border-bottom: 4px solid #939393;
+}
