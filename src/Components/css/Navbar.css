@@ -1,8 +1,26 @@
 .father{
     display: flex;
     flex-direction: row;
-    background: linear-gradient(90deg, rgb(28, 45, 161) 0%, rgba(64,186,181,1) 22%, rgb(0, 0, 5) 89%);
+    background: linear-gradient(90deg, rgb(28, 45, 161) 0%, rgba(64,186,181,1) 22%, rgba(63, 3, 76, 0.85) 89%);
 }
 .son{
     width: 25%;
+    background: transparent;
+    height: 70px;
+    border-radius: 0;
+    color: white;
+    transition-duration: 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.is-active{
+    background: #1E32A2;
+    border: 1px solid white;
+    color: white;
+}
+/* mouse over link */
+.son:hover {
+    color: white;
+    text-decoration: none;
 }

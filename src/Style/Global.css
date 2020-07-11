@@ -1,22 +1,6 @@
 body{
     font-family: Consolas, Serif;
 }
-.son{
-    width: 25%;
-    background: transparent;
-    height: 70px;
-    border-radius: 0;
-    color: white;
-    transition-duration: 0.3s;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.son:hover{
-    background: rgb(26, 50, 180);
-    border: 1px solid white;
-    color: white;
-}
 .container-global{
     position: relative;
     top: 70px;
@@ -24,7 +8,7 @@ body{
 }
 /* width */
 ::-webkit-scrollbar {
-    width: 8px;
+    width: 10px;
 }
 
 /* Track */
@@ -34,10 +18,10 @@ body{
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-    background: #09015B;
+    background: rgba(63, 3, 76, 0.85);
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-    background: rgb(26, 50, 180);
+    background: #09015B;
 }

@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
 import './css/Navbar.css'
 
@@ -8,18 +8,18 @@ class Navbar extends React.Component{
   render() {
     return (
       <div className="father fixed-top d-print-none">
-        <Link className="btn son" to="/">
+        <NavLink exact className="son" activeClassName="is-active" to="/">
           HOME
-        </Link>
-        <Link className="btn son" to="/">
+        </NavLink>
+        <NavLink className="son" activeClassName="is-active" to="/uno">
           Uno
-        </Link>
-        <Link className="btn son" to="/popu">
+        </NavLink>
+        <NavLink className="son" activeClassName="is-active" to="/dos">
           Dos
-        </Link>
-        <Link className="btn son" to="/tres">
+        </NavLink>
+        <NavLink className="son" activeClassName="is-active" to="/tres">
           Tres
-        </Link>
+        </NavLink>
       </div>
     );
   }

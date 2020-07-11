@@ -1,10 +1,10 @@
 import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
-import './App.css';
 
-import Main from './Views/Home'
+import Home from './Views/Home'
 import Navbar from './Components/Navbar'
 import Footer from './Components/Footer'
+import NotFound from './Views/NotFound'
 
 function App() {
   return (
@@ -12,8 +12,8 @@ function App() {
       <Navbar></Navbar>
       <div className="container-global">
         <Switch>
-          <Route exact path="/" component={Main}/>
-          {/*<Route exact path="/main" component={Play}/>*/}
+          <Route exact path="/" component={Home}/>
+          <Route component={NotFound}/>
         </Switch>
       </div>
       <Footer></Footer>

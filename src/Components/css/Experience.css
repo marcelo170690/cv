@@ -18,8 +18,8 @@
   width: 90%;
 }
 .experience:hover{
-  border-right: 3px solid #97C941;
-  border-bottom: 3px solid #97C941;
+  border-right: 3px solid #0791E6;
+  border-bottom: 3px solid #0791E6;
   background: #eeeded;
 }
 .circle{
@@ -28,7 +28,4 @@
   border-radius: 50%;
   background: #0791E6;
   position: absolute;
-}
-.title-experience{
-  border-bottom: 4px solid #939393;
 }

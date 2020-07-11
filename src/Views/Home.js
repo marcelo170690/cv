@@ -5,7 +5,7 @@ import Experiences from "../Components/Experiences";
 import Loader from "../Components/Loader";
 import Academics from "../Components/Academics";
 import Courses from "../Components/Courses";
-// import Api from '../Api'
+import UniversityExperiences from "../Components/UniversityExperiences";
 
 const experiences = [
   {
@@ -143,6 +143,118 @@ const courses = [
     title: 'Curso de Oracle para Ingenieros',
     place: 'SIB',
     date: 'Oruro, 29 de Noviembre de 2016 a 2 de Diciembre de 2016',
+  },
+  {
+    kind: 'Curso',
+    title: 'Curso Oracle',
+    place: 'UTO – FNI',
+    date: 'Oruro, 17 de Octubre de 2016 a 24 de Octubre de 2016'
+  },
+  {
+    kind: 'Curso',
+    title: 'Campamento internacional de Programación. (Cursos y Competencias)',
+    place: 'UTO – FNI',
+    date: 'Oruro, 12 de Septiembre de 2016 a 21 de Septiembre de 2016'
+  },
+  {
+    kind: 'Taller',
+    title: 'Aprobado en el curso de Desarrollo de Aplicaciones y Generación de Reportes con C#.Net SQL Server 2008 R2 y ReportViewer',
+    place: 'UTO – FNI',
+    date: 'Oruro, 28 de Septiembre de 2015 al 16 de Octubre de 2015'
+  },
+  {
+    kind: 'Taller',
+    title: 'Introducción al Diseño Web',
+    place: 'UTO – FNI',
+    date: 'Oruro, 14 – 25 de Septiembre de 2015'
+  },
+  {
+    kind: 'Taller',
+    title: 'Administración de Base de Datos con SQL Server y MySQL',
+    place: 'UTO – FNI',
+    date: 'Oruro, 24 de Agosto de 2015 a 4 de Septiembre de 2015'
+  },
+  {
+    kind: 'Taller',
+    title: 'Campamento de Programación de Sistemas e Informática',
+    place: 'UTO – FNI',
+    date: 'Oruro, 24 – 29 de Agosto de 2015'
+  },
+  {
+    kind: 'Seminario',
+    title: 'Jornadas Académicas',
+    place: 'UTO – FNI',
+    date: 'Oruro, 16 – 17 de Junio de 2015',
+  },
+  {
+    kind: 'Seminario',
+    title: '3er Congreso Nacional de Ingeniería Informática, Sistemas y Telecomunicaciones',
+    place: 'SIB – LA PAZ',
+    date: 'La Paz, 30 – 31 de Mayo de 2015',
+  },
+  {
+    kind: 'Taller',
+    title: 'Arduino',
+    place: 'UTO – FNI',
+    date: 'Oruro, 15 – 26 de Mayo de 2015',
+  }
+]
+
+const universityExperiences = [
+  {
+    experience: 'Auxiliar de Catedra - Simulación de Sistemas',
+    place: 'UTO - FNI.',
+    date: '01 de enero de 2019 - 30 de Junio de 2019'
+  },
+  {
+    experience: 'Auxiliar de Catedra - Simulación de Sistemas',
+    place: 'UTO - FNI.',
+    date: '01 de julio de 2018 - 31 de diciembre de 2018'
+  },
+  {
+    experience: 'Auxiliar de Catedra - Bases de Datos I',
+    place: 'UTO - FNI.',
+    date: '01 de enero de 2018 - 30 de junio de 2018'
+  },
+  {
+    experience: 'Auxiliar de Catedra - Bases de Datos I',
+    place: 'UTO - FNI.',
+    date: '01 de julio de 2017 - 31 de diciembre de 2017'
+  },
+  {
+    experience: 'Auxiliar de Catedra - Bases de Datos II',
+    place: 'UTO - FNI.',
+    date: '01 de enero de 2016 - 30 de Junio de 2016'
+  },
+  {
+    experience: 'Representación a la facultad de Ingeniería Sistemas (UTO) en la competencia clasificatoria latinoamericana organizado por ACM ICPC.',
+    place: 'Potosí, UNIVERSIDAD AUTÓNOMA TOMAS FRÍAS.',
+    date: '10 – 11 de Noviembre de 2018.'
+  },
+  {
+    experience: 'Lugar obtenido  en el podio y clasificación a la competencia latinoamericana como representante de la facultad de Ingeniería de Sistemas (UTO), organizado por la ACM ICPC.',
+    place: 'Oruro, INTJEM.',
+    date: '1 de Septiembre de 2018.'
+  },
+  {
+    experience: 'Reconocimiento Primer Lugar en concurso de Programación organizado por la Carrera de Sistemas e Informática.',
+    place: 'Oruro, UTO – FNI.',
+    date: '16 de Junio de 2018.'
+  },
+  {
+    experience: 'Representación a la facultad de Ingeniería Informática (UTO) en la competencia clasificatoria latinoamericana organizado por la ACM ICPC.',
+    place: 'Sucre, Universidad Mayor, Real y Pontificia de San Francisco Xavier.',
+    date: '10 – 11 de Noviembre de 2017.'
+  },
+  {
+    experience: 'Aplicador, Control y Responsable de Aula para la 6ta Olimpiada Científica Plurinacional Boliviana.',
+    place: 'Oruro',
+    date: '29 de Julio de 2016'
+  },
+  {
+    experience: 'Reconocimiento Primer Lugar en concurso de Programación organizado por la Carrera de Sistemas e Informática.',
+    place: 'Oruro, UTO – FNI',
+    date: '16 de Junio de 2016'
   }
 ]
 
@@ -157,12 +269,16 @@ class Home extends React.Component {
     courses: '',
     loadingCourse: true,
     ErrorCourse: null,
+    universityExperiences: '',
+    loadingUniversityExperience: true,
+    errorUniversityExperience: null
   }
 
   componentDidMount(){
     this.experienceIndex()
     this.academicIndex()
     this.courseIndex()
+    this.universityExperiences()
   }
 
   experienceIndex = async () => {
@@ -225,6 +341,24 @@ class Home extends React.Component {
     }
   }
 
+  universityExperiences = async () => {
+    this.setState({
+      loadingUniversityExperience: true,
+      errorUniversityExperience: null
+    })
+    try {
+      this.setState({
+        loadingUniversityExperience: false,
+        universityExperiences: universityExperiences
+      })
+    } catch (error) {
+      this.setState({
+        loadingUniversityExperience: false,
+        errorUniversityExperience: error
+      })
+    }
+  }
+
   render() {
     return (
       <div className="container">
@@ -235,21 +369,28 @@ class Home extends React.Component {
             <MyProfile/>
           </div>
           <div className="col-md-9">
-            {this.state.loadingExperience ? (
-              <Loader/>
-            ):(
-              <Experiences experiences={this.state.experiences}/>
-            )}
-            {this.state.loadingAcademic ? (
-              <Loader/>
-            ):(
-              <Academics academics={this.state.academics}/>
-            )}
-            {this.state.loadingCourse ? (
-              <Loader/>
-            ):(
-              <Courses courses={this.state.courses}/>
-            )}
+            <div className="accordion" id="accordionExample">
+              {this.state.loadingExperience ? (
+                <Loader/>
+              ):(
+                <Experiences experiences={this.state.experiences}/>
+              )}
+              {this.state.loadingAcademic ? (
+                <Loader/>
+              ):(
+                <Academics academics={this.state.academics}/>
+              )}
+              {this.state.loadingCourse ? (
+                <Loader/>
+              ):(
+                <Courses courses={this.state.courses}/>
+              )}
+              {this.state.loadingUniversityExperience ? (
+                <Loader/>
+              ):(
+                <UniversityExperiences universityExperiences={this.state.universityExperiences}/>
+              )}
+            </div>
           </div>
         </div>
         <br/>

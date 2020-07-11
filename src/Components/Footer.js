@@ -7,7 +7,7 @@ class Footer extends React.Component{
             <div className="clearfix footer fixed-bottom bg-dark">
                 <div className="float-left">
                     <div className="text-white">
-                        coso
+                        7binary
                     </div>
                 </div>
                 <div className="float-right">

@@ -1,5 +1,5 @@
 {
-  "short_name": "React App",
+  "short_name": "CV Marcelo Choque Pacheco",
   "name": "Create React App Sample",
   "icons": [
     {
@@ -20,6 +20,6 @@
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "theme_color": "#0000FF",
+  "background_color": "#F0F0F0"
 }
